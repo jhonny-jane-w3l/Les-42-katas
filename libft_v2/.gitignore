@@ -1,6 +1,14 @@
+# Ignorer le fichier PDF
 0_LibftV2.pdf
-.vscode
-*.a
-*.out
-main.c
 
+# Ignorer le répertoire .vscode
+.vscode/
+
+# Ignorer tous les fichiers .a (bibliothèques statiques)
+*.a
+
+# Ignorer tous les fichiers de sortie .out (binaires)
+*.out
+
+# Ignorer le fichier main.c (si tu veux vraiment l'ignorer)
+main.c
