@@ -1,4 +1,5 @@
 0_LibftV2.pdf
-.vscode
-.a
-.out
+/.vscode
+/.a
+/.out
+/main.c
