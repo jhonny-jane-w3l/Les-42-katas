@@ -4,6 +4,9 @@
 # Ignorer le répertoire .vscode
 .vscode/
 
+# ignorer le fichier .gitignore
+.gitignore
+
 # Ignorer tous les fichiers .a (bibliothèques statiques)
 *.a
 
