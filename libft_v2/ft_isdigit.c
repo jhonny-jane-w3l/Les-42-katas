@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 16:15:27 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/10 16:31:21 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/09/15 07:06:11 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char c = '1';
-// 	char d = 1;
-// 	printf ("%d\n",ft_isdigit(c));
-// 	printf ("%d\n",ft_isdigit(d));
-// 	return (1);
-// }
