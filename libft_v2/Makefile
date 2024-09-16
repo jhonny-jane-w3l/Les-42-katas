@@ -1,18 +1,30 @@
-SOURCE = main.c 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+SOURCE=	*.c
 
+CC=gcc
+CFLAGS= -Wall -Wextra -Werror
+OBJS= $(SOURCE:*.c=*.o)
+NAME=libft.a
+s=
 
-
+${NAME}: ${OBJS}
+	ar rcs ${CFLAGS} 
 clean:
-	rm -f *.out
+	rm -f *.o
 
 fclean:
 
 re: fclean all
 
-
 # other
+.PHONY: test
+test: test/$(basename $(s))_main.c $(s)
+	@if [ -n "$(s)" ]; then \
+		$(CC) $(CFLAGS) test/$(basename $(s))_main.c *.c -o $(basename $(s)).o; \
+	else \
+		echo "Erreur : Vous n'avez pas saisi de nom de fichier."; \
+	fi
+	
+
 init:
 	@read -p "Veuillez entrer le nom du fichier (sans extension) : " s; \
 	if [ -n "$$s" ]; then \

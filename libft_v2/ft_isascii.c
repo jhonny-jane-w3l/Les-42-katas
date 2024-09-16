@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/10 15:59:47 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/16 09:43:26 by cw3l             ###   ########.fr       */
+/*   Created: 2024/09/16 10:16:37 by cw3l              #+#    #+#             */
+/*   Updated: 2024/09/16 10:19:23 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_is_upper(int c)
-{
-	if (c >= 65 && c <= 90)
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
-static int	ft_is_lower(int c)
+int ft_isascii(int c)
 {
-	if (c >= 97 && c <= 122)
-		return (1);
-	return (0);
-}
-
-int	ft_isalpha(int c)
-{
-	if (ft_is_upper(c) == 1 || ft_is_lower(c) == 1)
-		return (1);
-	return (0);
+    if (c >= 0 && c <=127)
+        return (1);
+    return (0);   
 }
