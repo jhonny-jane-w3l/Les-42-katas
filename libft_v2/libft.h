@@ -18,6 +18,8 @@ void    *ft_memset(void *b, int c, size_t len);
 void    ft_bzero(void *s, size_t n);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
 void    *ft_memmove(void *dst, const void *src, size_t len);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
 
 #endif
 
