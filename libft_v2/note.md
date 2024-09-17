@@ -10,9 +10,6 @@ Memset ne gère pas le caractere nul en fin de tableau.
 ideal pour instancier des tableau de caracteres ou de bytes.
 PAS DE INT!
 
-# ft_calloc:
-
-Allocation de memoire, comme malloc  + initialization a 0 (comme bzero).
 
 # ft_memmove:
 
@@ -29,3 +26,14 @@ Après la copie (avec memmove, fonctionne correctement) : memmove(str + 3, str, 
 [ B ][ o ][ n ][ B ][ o ][ n ][ j ][ o ][ u ][ r ][ , ][ m ][ o ][ n ][ d ][ e ]
 
 memmove utilise un tampon temporaire pour s'assurer que les données ne sont pas écrasées avant d'être entièrement copiées.
+
+# ft_calloc:
+
+Allocation de memoire, comme malloc  + initialization a 0 (comme bzero).
+
+# ft_strlcpy
+
+version securisé de strcpy car garanti le derniers caractere null.
+Copy dstsize - 1 de src dans dst.
+Termine dst par un caractère NULL.
+
