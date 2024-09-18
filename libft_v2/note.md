@@ -118,3 +118,15 @@ Si le nombre de signe - est impaire alors le resultat sera negatif;
 malloc(len) + strlcpy(dst pointeur,start pointeur, len);
 
 Objectif, allouer de la memoire et etraire une sous chaine.
+
+## ft_strtrim
+
+Objectif : creer un nouvelle chaine = à s1 moins les valeur du set:
+exemple : str = frfrcedrricfr , set = fr, return = cedric.
+
+solution: 
+* 1: parcourir la chaine et compter le nombre de valeur à soustraire de la chaine.
+* 2: allouer la memoire : taille de la chaine - nombre de valeur à soustraire
+* 3: parourir la source et le set à l'aide d'une double boucle.
+* si une valeur du set est trouvé sortie de boucle deux.
+* 4: si la charactère n'appartien pas au set, il est copier dans le pointeur vers la nouvelle chaine. 
