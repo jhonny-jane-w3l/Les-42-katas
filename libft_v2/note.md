@@ -50,7 +50,7 @@ idem ft_strchr mais cherche la dernière occurance d'un entier converti en chara
 
 l'idée est de créer un poiteur qui servira pour enregistrer l'adresse de la dernière occurance trouvé
 
-# ft_memchr
+# ft_memchr A APPRONFONDIR
 
 chercher une valeur dans une sequence de bytes. le type generalement utilisé pour comparer ou chercher les bytes est le unsigned char.
 
@@ -78,7 +78,7 @@ L'objectif est de convertir une chaine de charactère en entier: ascii to int,
 
 methode:
 
-* Parcourir la chaine tant que le charactère renvoie true à la fonction ispace.
+* Parcourir la chaine tant que le charactère renvoie true à la fonction ispace. (ascii value : 9, 10, 11, 12, 13, 32)
 * Compter les signe moins pour determiner la valeur du signe final.
 * Creer une variable qui servira a stocker notre valeur final.
 * Parcourir la chaine tant que le charactère renvoie true à la fonction isdigit alors appliquer la formule:
