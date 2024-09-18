@@ -1,7 +1,9 @@
-# ft_isalnum:
+# PARTIE 1;
+
+## ft_isalnum:
 tests for any character for which isalpha(3) or isdigit(3) is true
 
-# ft_memset:
+## ft_memset:
 
 Le rôle de la fonction est de remplir un tableau octets par octets, en fonction de la taille donnée en paramètre de la valeur int (à caster en unsigned char)
 
@@ -11,7 +13,7 @@ ideal pour instancier des tableau de caracteres ou de bytes.
 PAS DE INT!
 
 
-# ft_memmove:
+## ft_memmove:
 
 Memmove permet de creer des decalage de memoire quand source et destination ce chevauche
 
@@ -27,34 +29,34 @@ Après la copie (avec memmove, fonctionne correctement) : memmove(str + 3, str, 
 
 memmove utilise un tampon temporaire pour s'assurer que les données ne sont pas écrasées avant d'être entièrement copiées.
 
-# ft_calloc:
+## ft_calloc:
 
 Allocation de memoire, comme malloc  + initialization a 0 (comme bzero).
 
-# ft_strlcpy
+## ft_strlcpy
 
 version securisé de strcpy car garanti le derniers caractere null.
 Copy dstsize - 1 de src dans dst.
 Termine dst par un caractère NULL.
 
-# ft_strchr
+## ft_strchr
 
 L'objectif est de trouver la première occurence c dans une chaine de caractère.
 Un poiteur vers le charactère dans la source est renvoyé si la caractère est trouvé.
 Si le charactère n'est pas trouvé, un pointeur null est renvoyé;
 Si le charactère recherché est '\0' un pointeur vers la fin de la chaine est renvoyé.
 
-# ft_strrchr
+## ft_strrchr
 
 idem ft_strchr mais cherche la dernière occurance d'un entier converti en charactère.
 
 l'idée est de créer un poiteur qui servira pour enregistrer l'adresse de la dernière occurance trouvé
 
-# ft_memchr A APPRONFONDIR
+## ft_memchr A APPRONFONDIR
 
 chercher une valeur dans une sequence de bytes. le type generalement utilisé pour comparer ou chercher les bytes est le unsigned char.
 
-# ft_strnstr
+## ft_strnstr
 
 needle = aiguille
 haystack = meule de foin.
@@ -67,12 +69,12 @@ Si needle existe, un poiteur vers le premier charactere dans haystack est renvoy
 
 Methode: parcourir haystack. Si haystack[i] == needle[0], apeller la fonction ft_strncmp. Si ft_strncmp == 0 , retourner haystack[i]
 
-# ft_strndup
+## ft_strndup
 objectif de la fonction: duppliquer une chaine de charactère en allouant un bloc memoire de n bytes.
 
 methode: malloc + strlcpy;
 
-# ft_atoi (verifier si la focntion doit gerer les int superieur aux max)
+## ft_atoi (verifier si la focntion doit gerer les int superieur aux max)
 
 L'objectif est de convertir une chaine de charactère en entier: ascii to int,
 
@@ -107,5 +109,12 @@ Determiner le signe :
 Si le nombre de signe - est paire alors le resultat sera positif;
 Si le nombre de signe - est impaire alors le resultat sera negatif;
 
+## ft_memcmp
+    revoir le concepte de comparaison de bytes.
 
+# PARTIE 2;
 
+## ft_substr
+malloc(len) + strlcpy(dst pointeur,start pointeur, len);
+
+Objectif, allouer de la memoire et etraire une sous chaine.

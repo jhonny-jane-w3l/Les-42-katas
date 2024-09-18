@@ -3,9 +3,6 @@
 
 #include "./../libft.h"
 
-
-
-
 int main(void)
 {
     unsigned char data[] = {0x01, 0x02, 0x04, 0x05};
