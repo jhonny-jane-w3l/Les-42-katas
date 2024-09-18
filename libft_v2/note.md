@@ -66,3 +66,46 @@ Si needle n'existe pas dans haystack c'est un pointeur NULL qui est retourné.
 Si needle existe, un poiteur vers le premier charactere dans haystack est renvoyé.
 
 Methode: parcourir haystack. Si haystack[i] == needle[0], apeller la fonction ft_strncmp. Si ft_strncmp == 0 , retourner haystack[i]
+
+# ft_strndup
+objectif de la fonction: duppliquer une chaine de charactère en allouant un bloc memoire de n bytes.
+
+methode: malloc + strlcpy;
+
+# ft_atoi (verifier si la focntion doit gerer les int superieur aux max)
+
+L'objectif est de convertir une chaine de charactère en entier: ascii to int,
+
+methode:
+
+* Parcourir la chaine tant que le charactère renvoie true à la fonction ispace.
+* Compter les signe moins pour determiner la valeur du signe final.
+* Creer une variable qui servira a stocker notre valeur final.
+* Parcourir la chaine tant que le charactère renvoie true à la fonction isdigit alors appliquer la formule:
+
+```bash
+ num = num * 10 + str[i] - '0';
+```
+
+exemple:    str = "12345" --->  str[i] = "1"
+            num = 0             num = 0 * 10 + "1" + '0' = 1
+
+            str = "2345" --->  str[i] = "2"
+            num = 1            num = 1 * 10 + "2" + '0' = 12
+
+            str = "345"  --->  str[i] = "3"
+            num = 12           num = 12 * 10 + "3" + '0' = 123
+
+            str = "45"   --->  str[i] = "4"
+            num = 123          num = 123 * 10 + "4" + '0' = 1234
+
+            str = "5"    --->  str[i] = "5"
+            num = 1234         num = 1234 * 10 + "1" + '0' = 12345
+
+Determiner le signe :
+
+Si le nombre de signe - est paire alors le resultat sera positif;
+Si le nombre de signe - est impaire alors le resultat sera negatif;
+
+
+
