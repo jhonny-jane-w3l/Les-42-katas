@@ -130,3 +130,16 @@ solution:
 * 3: parourir la source et le set à l'aide d'une double boucle.
 * si une valeur du set est trouvé sortie de boucle deux.
 * 4: si la charactère n'appartien pas au set, il est copier dans le pointeur vers la nouvelle chaine. 
+
+# ft_strmapi
+retourne une nouvelle chaine de charactère resultant de l'application d'une fonction (*f)(i, s[i]) sur une chaine d'origine
+
+Il peut etre necessaire de wrapper la fonction a l'appliquer pour la faire correspondre au type void attendu.
+
+# ft_striteri
+idem ft_strmapi mais ne renvoie rien. Travaille directement sur la chaine.
+
+# ft_split
+
+Objectif : splitter une chaine en foncition d'un charactère cible. Retourner le tableau de string issu du split;
+
