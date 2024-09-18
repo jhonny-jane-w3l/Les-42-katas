@@ -125,7 +125,7 @@ Objectif : creer un nouvelle chaine = à s1 moins les valeur du set:
 exemple : str = frfrcedrricfr , set = fr, return = cedric.
 
 solution: 
-* 1: parcourir la chaine et compter le nombre de valeur à soustraire de la chaine.
+* 1: parcourir la chaine et compter le nombre de valeur à soustraire de la chaine.(attention au doublon).
 * 2: allouer la memoire : taille de la chaine - nombre de valeur à soustraire
 * 3: parourir la source et le set à l'aide d'une double boucle.
 * si une valeur du set est trouvé sortie de boucle deux.

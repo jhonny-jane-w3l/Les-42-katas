@@ -2,8 +2,8 @@
 
 int	main(void)
 {
-	char txt[] = "f!feefeq!rfrcedrr*i*cfr";
-	char set[] = "ffeefeqrfrcedrr*i*cfr";
+	char txt[] = "cedric";
+	char set[] = "ccccccccc";
 	printf ("%s\n", ft_strtrim(txt,set));
 	return (0);
 }
