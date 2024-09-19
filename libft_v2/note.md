@@ -143,3 +143,23 @@ idem ft_strmapi mais ne renvoie rien. Travaille directement sur la chaine.
 
 Objectif : splitter une chaine en foncition d'un charactère cible. Retourner le tableau de string issu du split;
 
+!revoir la fonction en detaille
+
+# ft_itoa
+
+convertir un entier en str.
+* prendre en consideration la valeur max d'un entier defini dans le header limits.h
+
+{INT_MAX}
+Maximum value for an object of type int.
+Minimum Acceptable Value: 2 147 483 647
+
+{INT_MIN}
+Minimum value for an object of type int.
+Maximum Acceptable Value: -2 147 483 647
+
+
+
+
+
+
