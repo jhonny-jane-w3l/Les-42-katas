@@ -1,89 +1,80 @@
-# PARTIE 1;
+# PARTIE 1
 
-## ft_isalnum:
-tests for any character for which isalpha(3) or isdigit(3) is true
+# ft_isalnum:
 
-## ft_memset:
+Teste pour tout caractère pour lequel isalpha(3) ou isdigit(3) est vrai.
 
-Le rôle de la fonction est de remplir un tableau octets par octets, en fonction de la taille donnée en paramètre de la valeur int (à caster en unsigned char)
+# ft_memset:
 
-Memset ne gère pas le caractere nul en fin de tableau.
+Le rôle de la fonction est de remplir un tableau octet par octet, en fonction de la taille donnée en paramètre, de la valeur int (à caster en unsigned char).
 
-ideal pour instancier des tableau de caracteres ou de bytes.
-PAS DE INT!
+Memset ne gère pas le caractère nul en fin de tableau.
 
+Idéal pour instancier des tableaux de caractères ou de bytes. PAS D'INT !
 
-## ft_memmove:
+# ft_memmove:
 
-Memmove permet de creer des decalage de memoire quand source et destination ce chevauche
+Memmove permet de créer des décalages de mémoire quand source et destination se chevauchent.
 
-exemple:
-Avant la copie (mémoire):
-[ B ][ o ][ n ][ j ][ o ][ u ][ r ][ , ][   ][ m ][ o ][ n ][ d ][ e ]
+Exemple: Avant la copie (mémoire) : [ B ][ o ][ n ][ j ][ o ][ u ][ r ][ , ][ ][ m ][ o ][ n ][ d ][ e ]
 
-Pendant la copie (avec memcpy, problème possible, comportement indefini): memcpy(str + 3, str, 7);
-[ B ][ o ][ n ][ B ][ o ][ u ][ r ][ , ][   ][ m ][ o ][ n ][ d ][ e ] (les données sont écrasées)
+Pendant la copie (avec memcpy, problème possible, comportement indéfini) : memcpy(str + 3, str, 7); 
+[ B ][ o ][ n ][ B ][ o ][ u ][ r ][ , ][ ][ m ][ o ][ n ][ d ][ e ] (les données sont écrasées)
 
-Après la copie (avec memmove, fonctionne correctement) : memmove(str + 3, str, 7);
+Après la copie (avec memmove, fonctionne correctement) : memmove(str + 3, str, 7); 
 [ B ][ o ][ n ][ B ][ o ][ n ][ j ][ o ][ u ][ r ][ , ][ m ][ o ][ n ][ d ][ e ]
 
 memmove utilise un tampon temporaire pour s'assurer que les données ne sont pas écrasées avant d'être entièrement copiées.
 
-## ft_calloc:
+# ft_calloc:
 
-Allocation de memoire, comme malloc  + initialization a 0 (comme bzero).
+Allocation de mémoire, comme malloc + initialisation à 0 (comme bzero).
 
-## ft_strlcpy
+# ft_strlcpy:
 
-version securisé de strcpy car garanti le derniers caractere null.
-Copy dstsize - 1 de src dans dst.
-Termine dst par un caractère NULL.
+Version sécurisée de strcpy, car garantit le dernier caractère nul. Copie dstsize - 1 de src dans dst. Termine dst par un caractère NULL.
 
-## ft_strchr
+# ft_strchr:
 
-L'objectif est de trouver la première occurence c dans une chaine de caractère.
-Un poiteur vers le charactère dans la source est renvoyé si la caractère est trouvé.
-Si le charactère n'est pas trouvé, un pointeur null est renvoyé;
-Si le charactère recherché est '\0' un pointeur vers la fin de la chaine est renvoyé.
+L'objectif est de trouver la première occurrence de c dans une chaîne de caractères. Un pointeur vers le caractère dans la source est renvoyé si le caractère est trouvé. Si le caractère n'est pas trouvé, un pointeur NULL est renvoyé. Si le caractère recherché est '\0', un pointeur vers la fin de la chaîne est renvoyé.
 
-## ft_strrchr
+# ft_strrchr:
 
-idem ft_strchr mais cherche la dernière occurance d'un entier converti en charactère.
+Idem ft_strchr mais cherche la dernière occurrence d'un entier converti en caractère.
 
-l'idée est de créer un poiteur qui servira pour enregistrer l'adresse de la dernière occurance trouvé
+L'idée est de créer un pointeur qui servira à enregistrer l'adresse de la dernière occurrence trouvée.
 
-## ft_memchr A APPRONFONDIR
+# ft_memchr A APPROFONDIR:
 
-chercher une valeur dans une sequence de bytes. le type generalement utilisé pour comparer ou chercher les bytes est le unsigned char.
+Chercher une valeur dans une séquence de bytes. Le type généralement utilisé pour comparer ou chercher les bytes est le unsigned char.
 
-## ft_strnstr
+# ft_strnstr:
 
-needle = aiguille
+needle = aiguille 
 haystack = meule de foin.
 
-L'objectif de la fonction est de trouver la sous chaine needle dans haystack limité a n caractère.
+L'objectif de la fonction est de trouver la sous-chaîne needle dans haystack limitée à n caractères.
 
-SI needle est vide , c'est la meule qui est renvoyé
-Si needle n'existe pas dans haystack c'est un pointeur NULL qui est retourné.
-Si needle existe, un poiteur vers le premier charactere dans haystack est renvoyé.
+SI needle est vide, c'est la meule qui est renvoyée. Si needle n'existe pas dans haystack, c'est un pointeur NULL qui est retourné. Si needle existe, un pointeur vers le premier caractère dans haystack est renvoyé.
 
-Methode: parcourir haystack. Si haystack[i] == needle[0], apeller la fonction ft_strncmp. Si ft_strncmp == 0 , retourner haystack[i]
+Méthode : parcourir haystack. Si haystack[i] == needle[0], appeler la fonction ft_strncmp. Si ft_strncmp == 0, retourner haystack[i].
 
-## ft_strndup
-objectif de la fonction: duppliquer une chaine de charactère en allouant un bloc memoire de n bytes.
+# ft_strndup:
 
-methode: malloc + strlcpy;
+Objectif de la fonction : dupliquer une chaîne de caractères en allouant un bloc mémoire de n bytes.
 
-## ft_atoi (verifier si la focntion doit gerer les int superieur aux max)
+Méthode : malloc + strlcpy.
 
-L'objectif est de convertir une chaine de charactère en entier: ascii to int,
+# ft_atoi (vérifier si la fonction doit gérer les int supérieurs au max):
 
-methode:
+L'objectif est de convertir une chaîne de caractères en entier : ascii to int.
 
-* Parcourir la chaine tant que le charactère renvoie true à la fonction ispace. (ascii value : 9, 10, 11, 12, 13, 32)
-* Compter les signe moins pour determiner la valeur du signe final.
-* Creer une variable qui servira a stocker notre valeur final.
-* Parcourir la chaine tant que le charactère renvoie true à la fonction isdigit alors appliquer la formule:
+Méthode :
+
+Parcourir la chaîne tant que le caractère renvoie true à la fonction isspace (ascii value : 9, 10, 11, 12, 13, 32).
+Compter les signes moins pour déterminer la valeur du signe final.
+Créer une variable qui servira à stocker notre valeur finale.
+Parcourir la chaîne tant que le caractère renvoie true à la fonction isdigit, puis appliquer la formule :
 
 ```bash
  num = num * 10 + str[i] - '0';
@@ -104,63 +95,60 @@ exemple:    str = "12345" --->  str[i] = "1"
             str = "5"    --->  str[i] = "5"
             num = 1234         num = 1234 * 10 + "1" + '0' = 12345
 
-Determiner le signe :
+Déterminer le signe :
 
-Si le nombre de signe - est paire alors le resultat sera positif;
-Si le nombre de signe - est impaire alors le resultat sera negatif;
+Si le nombre de signes "-" est pair, alors le résultat sera positif. Si le nombre de signes "-" est impair, alors le résultat sera négatif.
 
-## ft_memcmp
-    revoir le concepte de comparaison de bytes.
+# ft_memcmp:
 
-# PARTIE 2;
+Revoir le concept de comparaison de bytes.
 
-## ft_substr
-malloc(len) + strlcpy(dst pointeur,start pointeur, len);
+## PARTIE 2 :
 
-Objectif, allouer de la memoire et etraire une sous chaine.
+# ft_substr:
 
-## ft_strtrim
+malloc(len) + strlcpy(dst pointeur, start pointeur, len);
 
-Objectif : creer un nouvelle chaine = à s1 moins les valeur du set:
-exemple : str = frfrcedrricfr , set = fr, return = cedric.
+Objectif : allouer de la mémoire et extraire une sous-chaîne.
 
-solution: 
-* 1: parcourir la chaine et compter le nombre de valeur à soustraire de la chaine.(attention au doublon).
-* 2: allouer la memoire : taille de la chaine - nombre de valeur à soustraire
-* 3: parourir la source et le set à l'aide d'une double boucle.
-* si une valeur du set est trouvé sortie de boucle deux.
-* 4: si la charactère n'appartien pas au set, il est copier dans le pointeur vers la nouvelle chaine. 
+# ft_strtrim:
 
-# ft_strmapi
-retourne une nouvelle chaine de charactère resultant de l'application d'une fonction (*f)(i, s[i]) sur une chaine d'origine
+Objectif : créer une nouvelle chaîne = à s1 moins les valeurs du set : Exemple : str = frfrcedrricfr , set = fr, return = cedric.
 
-Il peut etre necessaire de wrapper la fonction a l'appliquer pour la faire correspondre au type void attendu.
+Solution :
 
-# ft_striteri
-idem ft_strmapi mais ne renvoie rien. Travaille directement sur la chaine.
+1 : Parcourir la chaîne et compter le nombre de valeurs à soustraire de la chaîne (attention aux doublons).
+2 : Allouer la mémoire : taille de la chaîne - nombre de valeurs à soustraire.
+3 : Parcourir la source et le set à l'aide d'une double boucle.
+Si une valeur du set est trouvée, sortie de la deuxième boucle.
+4 : Si le caractère n'appartient pas au set, il est copié dans le pointeur vers la nouvelle chaîne.
+ft_strmapi
+Retourne une nouvelle chaîne de caractères résultant de l'application d'une fonction (*f)(i, s[i]) sur une chaîne d'origine.
 
-# ft_split
+Il peut être nécessaire de wrapper la fonction à appliquer pour la faire correspondre au type void attendu.
 
-Objectif : splitter une chaine en foncition d'un charactère cible. Retourner le tableau de string issu du split;
+# ft_striteri:
 
-!revoir la fonction en detaille
+Idem ft_strmapi, mais ne renvoie rien. Travaille directement sur la chaîne.
 
-# ft_itoa
+# ft_split:
 
-convertir un entier en str.
+Objectif : Splitter une chaîne en fonction d'un caractère cible. Retourner le tableau de strings issu du split.
 
-Note: Attention avec le type INT_MIN
-Attention avec le zero
+Revoir la fonction en détail.
 
-Methode : 
+# ft_itoa:
 
-* 1: recuperer la taille de l'entier. ajouter +1 pour le caractere NULL et +1 si n is negatif.
-* 2: allouer la memoir pour la nouvelle chaine grace a la taille recuperée precédement.
-* 3: creer une bloucle: while (n >= 1) et attribuer n % 10 + '0' a str[i];
-Le remplissage ce fait de gauche a droite.  n % 10 permet de recuperer le dernier digit del'entier.
-* 4: ajouter le signe si is_negatif = 1;
-* 5: inserer le caractère null au bon endroit. (rappel le remplissage ce fait de droite a gauche)
+Convertir un entier en chaîne de caractères.
 
+Note : Attention avec le type INT_MIN. Attention avec le zéro.
 
+Méthode :
 
+1 : Récupérer la taille de l'entier. Ajouter +1 pour le caractère NULL et +1 si n est négatif.
+2 : Allouer la mémoire pour la nouvelle chaîne grâce à la taille récupérée précédemment.
+3 : Créer une boucle : while (n >= 1) et attribuer n % 10 + '0' à str[i]. Le remplissage se fait de droite à gauche. n % 10 permet de récupérer le dernier chiffre de l'entier.
+4 : Ajouter le signe si is_negatif = 1.
+5 : Insérer le caractère nul au bon endroit. (Rappel : le remplissage se fait de droite à gauche).
 
+# BONUS
