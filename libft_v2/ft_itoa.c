@@ -6,73 +6,79 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 03:32:50 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/19 05:02:33 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/09/19 12:22:23 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int int_len(int n)
+static int	int_len(int n, int *is_neg)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if (n < 0)
-    {
-        // if n is negatif, convert to positif
-        n = -n;
-        // i++ for the negativ sign in string
-        i++;
-    }
-    while (n > 0)
-    {
-        n = n / 10;
-        i++;
-    }
-    return(i);
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		n = -n;
+		*is_neg = 1;
+		i++;
+	}
+	while (n > 0)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
 }
 
-
-void    process_data(char *str, int n, int len)
+static void	process_data(char *str, int n, int len, int is_negatif)
 {
+	int	i;
 
-    int i;
-    int is_negatif;
-
-    i = len - 1;
-    is_negatif = 0;
-    printf("debut du process : n = %d et len = %d\n",n, len);
-    if (n < 0)
-    {
-        n = -n;
-        is_negatif += 1;    
-    }
-
-    while (n >= 1)
-    {
-        str[i] = n % 10 + '0';
-        printf("%d\n",i);
-        printf("voici la string %s\n", str);
-        n = n / 10;
-        i--;
-    }
-    if (is_negatif)
-        str[i] = '-';
-    str[len+1] = '\0';
-    printf("voici la string %s\n", str);
+	i = len - 1;
+	if (n < 0)
+		n = -n;
+	if (n == 0)
+	{
+		str[i] = '0';
+	}
+	else
+	{
+		while (n >= 1)
+		{
+			str[i] = n % 10 + '0';
+			n = n / 10;
+			i--;
+		}
+		if (is_negatif)
+			str[i] = '-';
+	}
+	str[len +1] = '\0';
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-  
-    int len;
-    char *ptr;
-    len = int_len(n);
-    
-    printf("la taille du texte est :%d\n", len);
-    ptr = malloc(sizeof(char) * (len + 1));
-    if (!ptr)
-        return (NULL);
-    process_data(ptr,n,len);
-    return(ptr);
+	int		len_memory;
+	int		is_negatif;
+	char	*ptr;
+
+	if (n == INT_MIN)
+	{
+		ptr = malloc(sizeof(char) * 12);
+		if (!ptr)
+			return (NULL);
+		ft_strlcpy(ptr, "-2147483647", 12);
+	}
+	else
+	{
+		is_negatif = 0;
+		len_memory = int_len(n, &is_negatif);
+		ptr = malloc(sizeof(char) * (len_memory + 1));
+		if (!ptr)
+			return (NULL);
+		process_data(ptr, n, len_memory, is_negatif);
+	}
+	return (ptr);
 }

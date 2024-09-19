@@ -148,17 +148,18 @@ Objectif : splitter une chaine en foncition d'un charactère cible. Retourner le
 # ft_itoa
 
 convertir un entier en str.
-* prendre en consideration la valeur max d'un entier defini dans le header limits.h
 
-{INT_MAX}
-Maximum value for an object of type int.
-Minimum Acceptable Value: 2 147 483 647
+Note: Attention avec le type INT_MIN
+Attention avec le zero
 
-{INT_MIN}
-Minimum value for an object of type int.
-Maximum Acceptable Value: -2 147 483 647
+Methode : 
 
-
+* 1: recuperer la taille de l'entier. ajouter +1 pour le caractere NULL et +1 si n is negatif.
+* 2: allouer la memoir pour la nouvelle chaine grace a la taille recuperée precédement.
+* 3: creer une bloucle: while (n >= 1) et attribuer n % 10 + '0' a str[i];
+Le remplissage ce fait de gauche a droite.  n % 10 permet de recuperer le dernier digit del'entier.
+* 4: ajouter le signe si is_negatif = 1;
+* 5: inserer le caractère null au bon endroit. (rappel le remplissage ce fait de droite a gauche)
 
 
 

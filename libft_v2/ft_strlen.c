@@ -6,13 +6,13 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 10:42:12 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/16 10:44:16 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/09/19 12:24:17 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

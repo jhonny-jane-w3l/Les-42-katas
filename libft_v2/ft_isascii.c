@@ -6,15 +6,15 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 10:16:37 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/16 10:19:23 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/09/19 12:26:17 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <=127)
-        return (1);
-    return (0);   
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

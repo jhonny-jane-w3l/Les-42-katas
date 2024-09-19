@@ -6,16 +6,16 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:03:04 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/16 15:07:31 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/09/19 12:25:20 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    if (n > 0)
-    {
-        ft_memset(s,0,n);
-    }
+	if (n > 0)
+	{
+		ft_memset(s, 0, n);
+	}
 }
