@@ -216,4 +216,15 @@ Mehode:
 * 4: passer à l'élément suivant.
 * 5: Liberer la memoire du tableau de pointeur.
 
+# ft_lstiter
+
+L'objectif est de parcourir une liste chainée et d'appliquer la fonction f à chaque lst->content.
+
+Mehode: 
+
+* 1: Verifier que les argument ne sont pas egal à NULL;
+* 2: parcourir la liste et appliqeur la fonction avec lst->content pour paramètre.
+* 3: passer à l'élément suivant: lst = lst.next
+
+
 
