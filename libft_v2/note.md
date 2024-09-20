@@ -151,4 +151,69 @@ Méthode :
 4 : Ajouter le signe si is_negatif = 1.
 5 : Insérer le caractère nul au bon endroit. (Rappel : le remplissage se fait de droite à gauche).
 
-# BONUS
+## BONUS
+
+# ft_lstnew
+
+Objectif: creer un nouveau pointeur de type t_list.
+t_list est un structure. Content pointe vers content et next pointe vers null (premièrs element de la liste chainée).
+
+# ft_lstadd_front
+
+Objectif: ajouter un element à la liste chainée , en tete de liste.
+
+Methode:
+faire pointer new.next vers l'adresse contenu dans le tableau d e pointeur.
+
+Attribuer au tableau de pointeur l'adresse du nouveau element.
+
+Main_test : creer un tableau de pointeur type t_list et allouer la memoire.
+
+creer un premier element de la liste. Ajouter l'adresse au tableau de pointeur.
+Creer un nouvelle element : ft_lstnew(txt);
+Apeller la fonction ft_lstadd_front;
+
+# ft_lstsize
+
+Objectif : mesurer la taille d'une liste chainée.
+Methode: 
+
+* 1 definifir un compteur.
+* 2 faire tourner une boucle tant que lst.next =! NULL
+* 3 incrementer le compteur.
+* 4 Definir lst comme etant egal à lst.next
+
+??? Veridfier si l'utilisation d'un buffer est indispansable
+
+# ft_lstlast
+
+idem ft_lstsize sans l'incrementation d'un compteur.
+Atenntion: bien verifier que lst != NULL pour eviter les comportement indesirable.
+
+# ft_lstadd_back
+
+Recuperer le dernier element de la liste chainée à l'aide de la fonction ft_lstlast.
+
+Si tmp = NULL,  inserer l'adresse de new dans le tableau de pointeur.
+
+Si tmp != NULL , tmp.next = new.
+
+# ft_lstdelone
+
+Objectif: supprimer un element de la list.
+Appliquer la fonction del à lst->content
+liberer la memoire de lst.
+
+# ft_lstclear
+
+Objectif : Supprimer tout la liste
+
+Mehode: 
+
+* 1: Verifier que les argument ne sont pas egal à NULL;
+* 2: definir un pointeur temporaire pour enregistrer l'adresse du prochaine element avant de liberer l'actuel.
+* 3: appliquer la fonction ft_lstdelone.
+* 4: passer à l'élément suivant.
+* 5: Liberer la memoire du tableau de pointeur.
+
+
