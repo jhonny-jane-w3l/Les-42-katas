@@ -226,5 +226,7 @@ Mehode:
 * 2: parcourir la liste et appliqeur la fonction avec lst->content pour paramètre.
 * 3: passer à l'élément suivant: lst = lst.next
 
+# ft_lstmap
 
+Objectif : idem ft_lstiter sauf qu'une nouvelle liste est renvoyé
 

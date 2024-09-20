@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 08:13:44 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/20 15:31:36 by cw3l             ###   ########.fr       */
+/*   Created: 2024/09/20 14:59:04 by cw3l              #+#    #+#             */
+/*   Updated: 2024/09/20 15:47:03 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*ptr;
-	t_list	*tmp;
 
-	if (!lst || !del)
-		return ;
-	ptr = *lst;
-	while (ptr->next)
+	//t_list	*new_list;
+	//t_list	*new_link;
+
+	if(!lst || !f || !del)
+		return (NULL);
+	
+	while (lst->next)
 	{
-		tmp = ptr->next;
-		ft_lstdelone(ptr,del);
-		ptr = tmp;
+		// new_link = ft_lstnew(f(lst->content));
+		// if (!new_link)
+		// 	ft_lstclear(&new_link,del);
+		// ft_lstadd_back(&new_list, new_link);
+		lst = lst->next;
 	}
-	*lst = NULL;
+	return (0);
 }

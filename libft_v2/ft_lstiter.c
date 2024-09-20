@@ -6,13 +6,13 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 14:30:44 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/20 14:38:42 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/09/20 14:58:04 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
 		return ;
@@ -21,5 +21,4 @@ void 	ft_lstiter(t_list *lst, void (*f)(void *))
 		f(lst->content);
 		lst = lst->next;
 	}
-	 
 }
