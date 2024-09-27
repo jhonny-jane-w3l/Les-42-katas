@@ -2,7 +2,7 @@
 
 int	main(void)
 {
-	char txt[] = "++2--+--++12(345 5452";
+	char txt[] = "---100080";
 	printf("%d\n", ft_atoi(txt));
 	return (0);
 }

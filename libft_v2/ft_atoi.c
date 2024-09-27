@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 01:33:22 by cw3l              #+#    #+#             */
-/*   Updated: 2024/09/18 02:03:47 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/09/26 07:38:54 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int	ft_atoi(const char *str)
 		num = num * 10 + (str[i] - '0');
 		i++;
 	}
-	if (sign && sign % 3 == 0)
+	// check sign % 3 but not only because 1 % 3 = 1
+	if ((sign && sign % 3 == 0) || sign == 1)
 		return (-num);
 	return (num);
 }
