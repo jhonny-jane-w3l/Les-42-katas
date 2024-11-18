@@ -17,10 +17,7 @@ fclean: clean
 
 re: fclean all
 
-gdev:
-	cd ..
-	git add .
-	git commit -m $(NAME)
-	git push
+gdev: 
+	cd .. && git add . && git commit -m $(NAME) && git push
 
 .PHONY: re all fclean 
