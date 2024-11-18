@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   test_dispatch.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 13:56:20 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/18 15:07:10 by cw3l             ###   ########.fr       */
+/*   Created: 2024/11/18 15:14:58 by cw3l              #+#    #+#             */
+/*   Updated: 2024/11/18 15:21:33 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
-
-#include "../include/ft_printf.h"
 #include "../include/libft.h"
+#include "../include/test.h"
 
-int ft_validation_arg(char **argv);
+void    ft_test_dispatch(char *str)
+{
+    if(ft_atoi(str) == 1);
+        
 
-
-#endif
+}

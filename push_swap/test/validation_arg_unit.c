@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   1.validation_arg_unit.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 13:56:20 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/18 15:07:10 by cw3l             ###   ########.fr       */
+/*   Created: 2024/11/18 15:04:57 by cw3l              #+#    #+#             */
+/*   Updated: 2024/11/18 15:14:15 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#include <assert.h>
+#include "../include/push_swap.h"
 
-#include "../include/ft_printf.h"
-#include "../include/libft.h"
+int main()
+{
+    char *arg = "1"; 
+    assert(ft_validation_arg(&arg) == 0);
+    
 
-int ft_validation_arg(char **argv);
-
-
-#endif
+    return (0);
+}

@@ -4,6 +4,7 @@ SRCS=$(wildcard srcs/*.c)
 OBJS=$(SRCS:.c=.o)
 NAME=push_swap
 DATE=$(shell date | sed 's/ /_/g')
+ARGS=
 
 all: $(NAME)
 
@@ -19,7 +20,13 @@ fclean: clean
 re: fclean all
 
 gdev:
-	echo $(DATE)
 	cd .. && git add . && git commit -m $(NAME)/$(DATE) && git push
 
-.PHONY: re all fclean 
+	
+#### test ###
+#$(CC) $(GFLAGS) test/$(testunit).c -Llib -lft -lftprintf -o $(testunit) 
+
+check:
+	test/checker_Mac42 $(ARGS) 
+
+.PHONY: re all fclean test
