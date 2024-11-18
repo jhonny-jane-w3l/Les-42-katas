@@ -18,7 +18,7 @@ fclean: clean
 re: fclean all
 
 gdev: 
-	echo date	
+	date	
 	cd .. && git add . && git commit -m $(NAME) && git push
 
 .PHONY: re all fclean 
