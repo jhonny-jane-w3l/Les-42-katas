@@ -3,7 +3,7 @@ GFLAGS= -Wall -Werror -Wextra -fsanitize=address -g
 SRCS=$(wildcard srcs/*.c)
 OBJS=$(SRCS:.c=.o)
 NAME=push_swap
-DATE=$(shell date)
+DATE=$(shell date | sed 's/ /_/g')
 
 all: $(NAME)
 
@@ -20,6 +20,6 @@ re: fclean all
 
 gdev:
 	echo $(DATE)
-	cd .. && git add . && git commit -m "$(DATE)" && git push
+	cd .. && git add . && git commit -m $(NAME)/$(DATE) && git push
 
 .PHONY: re all fclean 
