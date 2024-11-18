@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:18:01 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/18 15:18:52 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/11/18 15:58:59 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "../include/ft_printf.h"
 #include "../include/libft.h"
 
-int ft_validation_arg(char **argv);
+int validation_arg_unit();
 
 
 #endif

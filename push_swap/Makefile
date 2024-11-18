@@ -16,6 +16,8 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	cd test && rm -rf test.dSYM
+	cd test && rm -rf test
 
 re: fclean all
 
@@ -26,6 +28,9 @@ gdev:
 #### test ###
 #$(CC) $(GFLAGS) test/$(testunit).c -Llib -lft -lftprintf -o $(testunit) 
 
+test:
+	$(CC) $(GFLAGS) test/*.c srcs/push_swap_utils.c -Llib -lft -lftprintf -o test/test
+	./test/test
 check:
 	test/checker_Mac42 $(ARGS) 
 
