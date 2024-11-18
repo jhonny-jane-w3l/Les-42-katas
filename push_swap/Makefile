@@ -7,10 +7,20 @@ NAME=push_swap
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(SRCS) -Llib -lft -lftprintf -o $(NAME)
+	$(CC) $(GFLAGS) $(OBJS) -Llib -lft -lftprintf -o $(NAME)
 
 clean:
 	cd srcs && rm -f *.o
 
 fclean: clean
 	rm -f $(NAME)
+
+re: fclean all
+
+gdev:
+	cd ..
+	git add .
+	git commit -m $(NAME)
+	git push
+
+.PHONY: re all fclean 
