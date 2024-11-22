@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:53:07 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/22 17:28:40 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/11/22 17:46:38 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int main(int argc, char **argv)
      {
         len = number_of_int(argv);
         i = ft_parsing(&argv[1], len);
-        while (j < len - 1)
-        {
-           print_int(i[j]);
-           j++;
-        }
+        int rep = ft_check_repetition(i, len);
+        if(rep)
+            print_str("il y a une repetion");
+        else 
+            print_str("il n'y a pas de repetition");
      }
     else
         print_str("test KO\n");
