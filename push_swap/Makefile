@@ -34,4 +34,8 @@ test:
 check:
 	test/checker_Mac42 $(ARGS) 
 
+exam:
+	$(CC) $(GFLAGS) test/exercice_exam.c -Llib -lft -lftprintf -o test/exam
+	test/exam
+
 .PHONY: re all fclean test
