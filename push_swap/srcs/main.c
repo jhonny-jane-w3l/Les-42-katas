@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:53:07 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/22 20:10:51 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/11/22 20:12:25 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void    ft_print_arr(int *arr, int len)
 
     i = 0;
     while (i < len)
-        printf("voici l'entier %d\n", arr[i++]);
+        printf("%d", arr[i++]);
+    printf("\n");
 }
 
 int *ft_init_progr(char **argv)
