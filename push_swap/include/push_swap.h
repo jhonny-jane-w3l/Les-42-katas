@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:56:20 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/18 15:07:10 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/11/22 17:27:45 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 #include "../include/libft.h"
 
 int ft_validation_arg(char **argv);
+int ft_check_repetition(char **argv);
+int ft_are_space(char *str);
+int number_of_int(char **argv);
+void    ft_fill_process(char **argv, int *arr);
+int *ft_parsing(char **argv, int len);
+
 
 
 #endif

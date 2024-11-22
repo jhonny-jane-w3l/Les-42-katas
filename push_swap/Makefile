@@ -30,7 +30,7 @@ gdev:
 
 test:
 	$(CC) $(GFLAGS) test/*.c srcs/push_swap_utils.c -Llib -lft -lftprintf -o test/test
-	./test/test
+	
 check:
 	test/checker_Mac42 $(ARGS) 
 
