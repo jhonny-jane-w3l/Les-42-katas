@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:53:07 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/22 20:12:25 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/11/22 20:15:46 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void    ft_reverse_rotate(int *stack, int len)
         len--;
     }
     stack[len] = tmp;
-    ft_print_arr(stack, len);
+    //ft_print_arr(stack, len);
 }
 void    ft_push_swap(int *a, int len)
 {
@@ -98,6 +98,7 @@ void    ft_push_swap(int *a, int len)
     b = malloc(sizeof(int) * len);
     if (!b)
         exit(1);
+    ft_print_arr(a, len);
     ft_reverse_rotate(a, len);
     ft_print_arr(a, len);
 
