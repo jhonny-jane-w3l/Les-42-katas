@@ -29,3 +29,5 @@ Quicksort:
 De ce que j'ai compris cette algorythme consiste a determiner une valeur pivot dans le tableau. Je cherche a savoir s'il est plus efficasse de choisir un pivot en fonction de ça valeur ou en fonction de sont index. Je vais faire des test et dois apprendre a mesurer la complexité d'un algorythme.
 
 Il n'est pas necessaire que le pivot soit une valeur presente dans le tableau. Le pivot pourais etre la valeur moyenne de tout les element du tableau, ou la mediane du premier, dernier et element du milieu.
+
+J'ai integrer à la fonction qui verifie les doublons, une ligne qui calcule le taux de trie du tableau . Ce taux permettra de definir quel algoritme utiliser

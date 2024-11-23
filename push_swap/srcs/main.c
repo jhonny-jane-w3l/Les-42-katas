@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:53:07 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/23 20:40:29 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/11/23 21:11:53 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ void    ft_print_arr(int *arr, int len)
     printf("\n");
 }
 
-int ft_init_progr(char **argv)
+int ft_init_progr(char **argv, int *arr)
 {
-    int *arr;
     int len;
 
     if(!ft_validation_arg(&argv[1]))
@@ -76,7 +75,7 @@ int main(int argc, char **argv)
     if (argc < 2)
         return (ft_print_error());
     len = number_of_int(&argv[1]);
-    tx = ft_init_progr(&argv[1]);
+    tx = ft_init_progr(&argv[1], &arr);
     if (tx == -1)
         return (ft_print_error());
     else
