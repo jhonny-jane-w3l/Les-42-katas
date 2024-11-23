@@ -1,21 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validation_arg_unit.c                              :+:      :+:    :+:   */
+/*   algo_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:14:58 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/23 20:03:37 by cw3l             ###   ########.fr       */
+/*   Created: 2024/11/23 19:37:43 by cw3l              #+#    #+#             */
+/*   Updated: 2024/11/23 19:37:47 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../include/libft.h"
-#include "../include/test.h"
-#include "../include/push_swap.h"
-
-
-#define SIZE(arr) sizeof(arr) / sizeof(arr[0])
 
 int get_high(int *arr, int size)
 {
@@ -46,32 +39,4 @@ int get_low(int *arr, int size)
 		i++;
 	}
 	return (low);
-}
-int get_middle(int *arr, int size)
-{
-	int i;
-	int low;
-
-	i = 1;
-	low = arr[0];
-	while (i < size)
-	{
-		if (arr[i] < low)
-			low = arr[i];
-		i++;
-	}
-	return (low);
-}
-
-
-int    main()
-{
-	int arr[] = {-300 ,4000, 7, 80, -2, 33, 44, 5, -7, 888, -70};
-	int size = SIZE(arr);
-
-	printf("voici la size %d\n", 11 / 2);
-
-	printf("la plus grande valeur est %d\n", get_high(arr, size) );
-	printf("la plus grande valeur est %d\n", get_low(arr, size) );
-	return (0);
 }

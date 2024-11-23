@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:02:02 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/22 17:47:22 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/11/23 20:48:59 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,7 @@ void    ft_fill_process(char **argv, int *arr)
 
 int *ft_parsing(char **argv, int len)
 {
-    int i;
     int *arr;
-    char **split;
 
     arr = malloc(sizeof(int) * (len + 1));
     if (!arr)
@@ -95,20 +93,21 @@ int ft_check_repetition(int *arr, int len)
 {
     int i;
     int j;
+    int tx;
 
     i = 0;
+    tx = 0;
     while (i < len)
     {
         j = i + 1;
-        while (j < len - 1)
-        {
-            if(arr[i] == arr[j])
-                return (1);
-            j++;
-        }
+        if(arr[i] == arr[j])
+            return (-1);
+        if(arr[i] < arr[j])
+            tx++;
         i++;
     }
-    return (0);
+    tx = (100 * tx) / (len - 1) ;
+    return (tx);
 }
 
 int ft_validation_arg(char **argv)
