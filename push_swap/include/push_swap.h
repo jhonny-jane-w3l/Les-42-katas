@@ -6,7 +6,7 @@
 /*   By: cw3l <cw3l@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:56:20 by cw3l              #+#    #+#             */
-/*   Updated: 2024/11/23 19:36:44 by cw3l             ###   ########.fr       */
+/*   Updated: 2024/11/24 20:32:15 by cw3l             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,14 @@ int     *ft_parsing(char **argv, int len);
 void    ft_print_arr(int *arr, int len);
 int     get_high(int *arr, int size);
 int     get_low(int *arr, int size);
+int     ft_is_sort(int *arr, int len);
+void ft_pushy(int *dest, int *src,int *len_dest, int *len_src);
 
 //instruction
 void    ft_swap(int *stack);
 void    ft_rotate(int *stack, int len);
 void    ft_reverse_rotate(int *stack, int len);
+int get_low_idx(int *arr, int size);
 
 
 
